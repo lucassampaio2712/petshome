@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet's Home Clínica Veterinária 24h | Bauru - SP</title>
     <meta name="description" content="Pronto-socorro veterinário 24h no Centro de Bauru. Consultas, internação, exames, banho e tosa humanizado e cirurgias. Atendimento acolhedor e preço acessível.">
-    
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet's Home Clínica Veterinária 24h</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+ 
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -123,7 +137,6 @@
                     <a href="#inicio" class="hover:text-brand-blue transition-colors">Início</a>
                     <a href="#plantao" class="hover:text-brand-blue transition-colors">Plantão 24h</a>
                     <a href="#servicos" class="hover:text-brand-blue transition-colors">Serviços</a>
-                    <a href="#diferenciais" class="hover:text-brand-blue transition-colors">Diferenciais</a>
                     <a href="#depoimentos" class="hover:text-brand-blue transition-colors">Avaliações</a>
                     <a href="#contato" class="hover:text-brand-blue transition-colors">Localização & Contato</a>
                 </nav>
@@ -151,7 +164,6 @@
             <a href="#inicio" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Início</a>
             <a href="#plantao" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Plantão 24h</a>
             <a href="#servicos" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Serviços</a>
-            <a href="#diferenciais" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Diferenciais</a>
             <a href="#depoimentos" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Avaliações</a>
             <a href="#contato" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Localização & Contato</a>
             <div class="pt-2">
@@ -313,55 +325,441 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="servicos" class="py-16 sm:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-100">
-                    Nossos Serviços
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
-                    Cuidados Completos para Cães e Gatos
-                </h2>
-                <p class="text-slate-600 text-base">
-                    Da prevenção à alta complexidade, oferecemos tudo o que seu melhor amigo precisa em um único local no Centro de Bauru.
-                </p>
+    <section id="servicos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex-grow">
+    
+    <!-- Cabeçalho da Seção -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+        Nossos Serviços
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Atendimento Completo para o Seu Pet
+      </h2>
+      <p class="mt-3 text-slate-600 text-lg">
+        Estrutura moderna e equipe qualificada pronta para cuidar da saúde do seu companheiro a qualquer hora.
+      </p>
+    </div>
+
+    <!-- Grid de Cards Centralizado (flex justify-center com wrap) -->
+    <div class="flex flex-wrap justify-center gap-6 lg:gap-8 items-stretch">
+
+      <!-- Card 1: Pronto-Socorro 24h -->
+      <div class="w-full max-w-md bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Ícone com fundo rosado/vermelho leve -->
+          <div class="w-14 h-14 rounded-2xl bg-red-100/70 flex items-center justify-center text-red-500 mb-6">
+            <i class="fa-solid fa-truck-medical text-2xl"></i>
+          </div>
+
+          <!-- Título e Descrição -->
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">
+            Pronto-Socorro 24h
+          </h3>
+          <p class="text-slate-500 leading-relaxed mb-6 text-sm sm:text-base">
+            Atendimento de urgência e emergência sem interrupções. Equipe preparada para trauma, intoxicações e crises agudas a qualquer hora da noite ou do dia.
+          </p>
+        </div>
+
+        <!-- Divisor & Bullet points -->
+        <div class="pt-4 border-t border-slate-100 space-y-2.5">
+          <div class="flex items-center text-slate-600 text-sm font-medium">
+            <i class="fa-solid fa-check text-emerald-500 mr-2.5 text-base"></i>
+            <span>Plantão médico presencial</span>
+          </div>
+          <div class="flex items-center text-slate-600 text-sm font-medium">
+            <i class="fa-solid fa-check text-emerald-500 mr-2.5 text-base"></i>
+            <span>Suporte vital imediato</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Consultas Clínicas -->
+      <div class="w-full max-w-md bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Ícone com fundo azul leve -->
+          <div class="w-14 h-14 rounded-2xl bg-sky-100/70 flex items-center justify-center text-sky-500 mb-6">
+            <i class="fa-solid fa-stethoscope text-2xl"></i>
+          </div>
+
+          <!-- Título e Descrição -->
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">
+            Consultas Clínicas
+          </h3>
+          <p class="text-slate-500 leading-relaxed mb-6 text-sm sm:text-base">
+            Consultas de rotina, vacinação, vermifugação e acompanhamento preventivo com veterinários dedicados, atenciosos e focados no bem-estar do pet.
+          </p>
+        </div>
+
+        <!-- Divisor & Bullet points -->
+        <div class="pt-4 border-t border-slate-100 space-y-2.5">
+          <div class="flex items-center text-slate-600 text-sm font-medium">
+            <i class="fa-solid fa-check text-emerald-500 mr-2.5 text-base"></i>
+            <span>Check-up preventivo</span>
+          </div>
+          <div class="flex items-center text-slate-600 text-sm font-medium">
+            <i class="fa-solid fa-check text-emerald-500 mr-2.5 text-base"></i>
+            <span>Orientação nutricional</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- ================= SEÇÃO DE AVALIAÇÕES / DEPOIMENTOS ================= -->
+<section id="depoimentos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+  
+  <!-- Cabeçalho da Seção com Badge de Prova Social do Google -->
+  <div class="text-center max-w-3xl mx-auto mb-12">
+    <span class="inline-flex items-center gap-2 bg-amber-50 text-amber-800 border border-amber-200/60 text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
+      <i class="fa-brands fa-google text-amber-500"></i>
+      <span>Avaliação 4.6 no Google</span>
+    </span>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+      O Que Dizem os Tutores que Confiam em Nós
+    </h2>
+    <p class="mt-3 text-slate-600 text-lg">
+      Mais de 329 avaliações reais de quem já vivenciou o nosso carinho, dedicação e prontidão 24 horas em Bauru.
+    </p>
+  </div>
+
+  <!-- Cards de Depoimentos (Grid Responsivo) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+    <!-- Depoimento 1: Preço Acessível & Atendimento -->
+    <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+      <div>
+        <!-- Estrelas Google + Ícone -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex text-amber-400 space-x-1 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <i class="fa-brands fa-google text-slate-300 text-xl"></i>
+        </div>
+
+        <!-- Texto da Avaliação -->
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed italic mb-6">
+          "Preço muito acessível e um ótimo tratamento com os cachorros. Fui muito bem atendida desde a recepção até o médico veterinário. Dá para ver que realmente amam o que fazem!"
+        </p>
+      </div>
+
+      <!-- Perfil do Autor -->
+      <div class="flex items-center pt-4 border-t border-slate-100">
+        <div class="w-11 h-11 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center mr-3 text-base">
+          MA
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-sm">Mariana Almeida</h4>
+          <p class="text-slate-400 text-xs">Tutor da 'Mel' (Golden Retriever)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Depoimento 2: Carinho com Pets Medrosos / Estufa de Secagem -->
+    <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+      <div>
+        <!-- Estrelas Google + Ícone -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex text-amber-400 space-x-1 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <i class="fa-brands fa-google text-slate-300 text-xl"></i>
+        </div>
+
+        <!-- Texto da Avaliação -->
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed italic mb-6">
+          "O meu gatinho é extremamente medroso e assustado com barulhos de soprador. O cuidado na hora do banho e o uso da estufa de secagem fez toda a diferença. Ele voltou calmo e cheiroso!"
+        </p>
+      </div>
+
+      <!-- Perfil do Autor -->
+      <div class="flex items-center pt-4 border-t border-slate-100">
+        <div class="w-11 h-11 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center mr-3 text-base">
+          RC
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-sm">Ricardo Carvalho</h4>
+          <p class="text-slate-400 text-xs">Tutor do 'Oliver' (Persa)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Depoimento 3: Emergência 24h & Estrutura -->
+    <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+      <div>
+        <!-- Estrelas Google + Ícone -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex text-amber-400 space-x-1 text-sm">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <i class="fa-brands fa-google text-slate-300 text-xl"></i>
+        </div>
+
+        <!-- Texto da Avaliação -->
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed italic mb-6">
+          "Precisei do pronto-socorro às 3h da manhã de um domingo. O atendimento foi imediato, atencioso e muito seguro. Salvaram a vida do meu cachorro e o valor cobrado foi extremamente justo."
+        </p>
+      </div>
+
+      <!-- Perfil do Autor -->
+      <div class="flex items-center pt-4 border-t border-slate-100">
+        <div class="w-11 h-11 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center mr-3 text-base">
+          FS
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-sm">Fernanda Souza</h4>
+          <p class="text-slate-400 text-xs">Tutora do 'Thor' (Vira-lata)</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Banner de Chamada para Ver Mais no Google -->
+  <div class="mt-10 text-center">
+    <a href="https://www.google.com/maps" target="_blank" class="inline-flex items-center gap-2 text-slate-600 hover:text-blue-600 font-semibold text-sm transition-colors">
+      <span>Ver todas as 329+ avaliações no Google Maps</span>
+      <i class="fa-solid fa-arrow-right text-xs"></i>
+    </a>
+  </div>
+
+</section>
+<!-- ================= SEÇÃO LOCALIZAÇÃO & CONTATO ================= -->
+<section id="contato" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+  
+  <!-- Cabeçalho da Seção -->
+  <div class="text-center max-w-3xl mx-auto mb-12">
+    <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-800 border border-blue-200/60 text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
+      <i class="fa-solid fa-location-dot text-blue-600"></i>
+      <span>Localização & Contato</span>
+    </span>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+      Fácil Acesso no Centro de Bauru
+    </h2>
+    <p class="mt-3 text-slate-600 text-lg">
+      Estamos localizados no coração da cidade, preparados para receber o seu pet a qualquer hora do dia ou da noite.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    
+    <!-- Coluna da Esquerda: Cartão de Informações e Contacto (5 cols) -->
+    <div class="lg:col-span-5 space-y-6">
+      
+      <!-- Cartão Principal de Contacto -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300">
+        
+        <!-- Badge Status 24h -->
+        <div class="mb-6 inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200/60 text-sm font-bold">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+          </span>
+          <span>Aberto 24 Horas / 7 Dias por Semana</span>
+        </div>
+
+        <ul class="space-y-6">
+          <!-- Endereço -->
+          <li class="flex items-start">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl shrink-0 mr-4">
+              <i class="fa-solid fa-map-pin"></i>
             </div>
+            <div>
+              <h4 class="text-slate-900 font-bold text-base">Endereço Completo</h4>
+              <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                R. José Aielo, 420 - Quadra 4 - Centro<br />
+                Bauru - SP, 17014-273
+              </p>
+            </div>
+          </li>
 
-            <!-- Services Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Service Card 1 -->
-                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-brand-blue/30 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-truck-medical"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Pronto-Socorro 24h</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Atendimento de urgência e emergência sem interrupções. Equipe preparada para trauma, intoxicações e crises agudas a qualquer hora da noite ou do dia.
-                        </p>
-                    </div>
-                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/60 pt-4">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Plantão médico presencial</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Suporte vital imediato</li>
-                    </ul>
-                </div>
+          <!-- Telefone / WhatsApp -->
+          <li class="flex items-start">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl shrink-0 mr-4">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h4 class="text-slate-900 font-bold text-base">Atendimento & Urgência</h4>
+              <p class="text-slate-600 text-sm mt-1">
+                <a href="tel:14981246105" class="hover:text-emerald-600 font-semibold transition-colors">
+                  (14) 98124-6105
+                </a>
+              </p>
+              <p class="text-slate-400 text-xs mt-0.5">Atendimento telefónico e WhatsApp imediato</p>
+            </div>
+          </li>
 
-                <!-- Service Card 2 -->
-                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-brand-blue/30 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
-                    <div>
-                        <div class="w-14 h-14 bg-sky-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-stethoscope"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Consultas Clínicas</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Consultas de rotina, vacinação, vermifugação e acompanhamento preventivo com veterinários dedicados, atenciosos e focados no bem-estar do pet.
-                        </p>
-                    </div>
-                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/60 pt-4">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Check-up preventivo</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Orientação nutricional</li>
-                    </ul>
-                </div>
+          <!-- Horários -->
+          <li class="flex items-start">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl shrink-0 mr-4">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <h4 class="text-slate-900 font-bold text-base">Horário de Funcionamento</h4>
+              <p class="text-slate-600 text-sm mt-1">
+                <strong>Pronto-Socorro & Internação:</strong> 24h sem interrupções<br />
+                <strong>Consultas & Banho/Tosa:</strong> Com agendamento ou encaixe
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Botões de Ação Direta -->
+        <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+          <a href="https://maps.google.com/?q=Rua+Jose+Aielo+420+Bauru+SP" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors shadow-sm">
+            <i class="fa-solid fa-diamond-turn-right mr-2"></i>
+            Traçar Rota no GPS
+          </a>
+          <a href="https://wa.me/5514981246105" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-colors shadow-sm">
+            <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+            WhatsApp 24h
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Formulário Rápido de Dúvidas / Agendamento -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Envie uma Mensagem</h3>
+        <p class="text-slate-500 text-sm mb-6">Para agendamentos de rotina ou informações gerais.</p>
+        
+        <form class="space-y-4" onsubmit="event.preventDefault();">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Nome do Tutor</label>
+            <input type="text" placeholder="Ex: Ana Silva" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Telefone / WhatsApp</label>
+              <input type="tel" placeholder="(14) 99999-9999" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Nome do Pet</label>
+              <input type="text" placeholder="Ex: Bob" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Como podemos ajudar?</label>
+            <textarea rows="3" placeholder="Descreva brevemente o que o seu pet precisa..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-colors">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Coluna da Direita: Mapa Interativo do Google Maps (7 cols) -->
+    <div class="lg:col-span-7 h-full min-h-[450px] lg:min-h-[720px] rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative">
+      <iframe 
+        title="Mapa da Pet's Home Clínica Veterinária 24h"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8710776781216!2d-49.07223362378906!3d-22.32070497967204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf663458b6883b%3A0x6b30cd03080c98f8!2sR.%20Jos%C3%A9%20Aielo%2C%20420%20-%20Centro%2C%20Bauru%20-%20SP%2C%2017014-273!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+        class="w-full h-full min-h-[450px] lg:min-h-[720px] border-0" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ================= RODAPÉ (FOOTER) ================= -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Coluna 1: Sobre & Emergência -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl">
+              <i class="fa-solid fa-paw"></i>
+            </div>
+            <span class="text-xl font-bold text-white tracking-tight">Pet's Home <span class="text-blue-400">24h</span></span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Atendimento veterinário humanizado, estrutura completa e prontidão 24 horas para cuidar de quem faz parte da sua família em Bauru.
+          </p>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Plantão Aberto Agora 24h
+            </span>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div>
+          <h4 class="text-white font-semibold text-base mb-4">Navegação</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Início</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Plantão 24h</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Especialidades & Serviços</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Estrutura & Estufa de Secagem</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Depoimentos dos Tutores</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Serviços -->
+        <div>
+          <h4 class="text-white font-semibold text-base mb-4">Serviços Veterinários</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Pronto-Socorro 24h</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Consultas de Rotina</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Internação Monitorada</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Banho & Tosa Humanizado</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition-colors">Exames Diagnósticos</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contato & Localização -->
+        <div>
+          <h4 class="text-white font-semibold text-base mb-4">Contato & Endereço</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-start">
+              <i class="fa-solid fa-location-dot text-blue-400 mt-1 mr-3"></i>
+              <span>R. José Aielo, 420 - Quadra 4 - Centro, Bauru - SP, 17014-273</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-phone text-blue-400 mr-3"></i>
+              <span>(14) 98124-6105</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-clock text-blue-400 mr-3"></i>
+              <span>Aberto 24 horas / 7 dias por semana</span>
+            </li>
+          </ul>
+          
+          <!-- Botão WhatsApp -->
+          <a href="https://wa.me/5514981246105" target="_blank" class="mt-5 inline-flex items-center justify-center w-full px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-colors shadow-lg shadow-emerald-900/20">
+            <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+            WhatsApp de Emergência
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Rodapé Inferior / Direitos -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>&copy; 2026 Pet's Home Clínica Veterinária 24h. Todos os direitos reservados.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Termos de Uso</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Política de Privacidade</a>
+        </div>
+      </div>
+
+    </div>
