@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet's Home Clínica Veterinária 24h | Bauru - SP</title>
+    <meta name="description" content="Pronto-socorro veterinário 24h no Centro de Bauru. Consultas, internação, exames, banho e tosa humanizado e cirurgias. Atendimento acolhedor e preço acessível.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284C7',
+                            darkblue: '#0F4C81',
+                            green: '#10B981',
+                            darkgreen: '#059669',
+                            orange: '#F97316',
+                            offwhite: '#F8FAFC',
+                            dark: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Continuous Pulse Animation for Emergency Button */
+        @keyframes pulse-emerald {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+            }
+        }
+        .animate-pulse-green {
+            animation: pulse-emerald 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+            }
+        }
+        .animate-pulse-emergency {
+            animation: pulse-red 1.8s infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0284C7;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0F4C81;
+        }
+    </style>
+</head>
+<body class="bg-brand-offwhite text-slate-800 antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- TOP EMERGENCY ALERT BAR -->
+    <div class="bg-red-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-semibold tracking-wide flex items-center justify-center gap-2 relative z-50 shadow-md">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+        <span>PLANTÃO VETERINÁRIO 24 HORAS ATIVO EM BAURU - SP</span>
+        <span class="hidden md:inline">| Em caso de emergência, não espere!</span>
+        <a href="https://wa.me/5514981246105?text=Olá,%20estou%20com%20uma%20EMERGÊNCIA%20veterinária%20e%20preciso%20de%20atendimento!" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="underline hover:text-amber-200 transition ml-2 font-bold flex items-center gap-1">
+           <i class="fa-solid fa-phone"></i> (14) 98124-6105
+        </a>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 border-b border-slate-100 shadow-sm transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-brand-darkblue to-brand-blue rounded-2xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-darkblue block leading-none">Pet's Home</span>
+                        <span class="text-xs font-bold text-brand-green tracking-widest uppercase flex items-center gap-1 mt-0.5">
+                            <i class="fa-solid fa-clock text-[10px]"></i> Clínica Veterinária 24h
+                        </span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV LINKS -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                    <a href="#inicio" class="hover:text-brand-blue transition-colors">Início</a>
+                    <a href="#plantao" class="hover:text-brand-blue transition-colors">Plantão 24h</a>
+                    <a href="#servicos" class="hover:text-brand-blue transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="hover:text-brand-blue transition-colors">Diferenciais</a>
+                    <a href="#depoimentos" class="hover:text-brand-blue transition-colors">Avaliações</a>
+                    <a href="#contato" class="hover:text-brand-blue transition-colors">Localização & Contato</a>
+                </nav>
+
+                <!-- HEADER CTA -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/5514981246105?text=Olá!%20Preciso%20de%20atendimento%20de%20emergência%20para%20o%20meu%20pet." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl shadow-md transition-all duration-300 flex items-center gap-2 text-sm animate-pulse-green">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Emergência 24h</span>
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU TOGGLE BUTTON -->
+                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition focus:outline-none" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl transition-all">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Início</a>
+            <a href="#plantao" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Plantão 24h</a>
+            <a href="#servicos" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Serviços</a>
+            <a href="#diferenciais" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Avaliações</a>
+            <a href="#contato" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-100">Localização & Contato</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5514981246105?text=Olá!%20Preciso%20de%20atendimento%20de%20emergência%20para%20o%20meu%20pet." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-md transition text-center flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp Emergência 24h</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-gradient-to-b from-slate-50 via-sky-50/50 to-brand-offwhite">
+        <!-- Background decorative elements -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-sky-200/30 blur-3xl rounded-full -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Plantão Badge -->
+                    <div class="inline-flex items-center gap-2 bg-red-100 border border-red-200 text-red-700 px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                        <span>🚨 Plantão Veterinário 24h • Aberto Todos os Dias no Centro de Bauru</span>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark flex-tight leading-tight">
+                        Cuidado e Dedicação ao Seu Pet a <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-darkblue">Qualquer Hora</span> do Dia ou da Noite.
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Pronto-socorro veterinário completo com atendimento humanizado, estrutura moderna para exames e internação, preços acessíveis e o carinho especial que cães e gatos de Bauru e região merecem.
+                    </p>
+
+                    <!-- Google Reviews Trust Badge -->
+                    <div class="inline-flex items-center gap-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-100">
+                        <div class="flex text-amber-400 text-base">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="text-left text-xs sm:text-sm">
+                            <span class="font-bold text-slate-800">4,6 no Google</span>
+                            <span class="text-slate-500 block sm:inline"> (+329 avaliações de tutores)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/5514981246105?text=Olá!%20Preciso%20de%20atendimento%20de%20emergência%20para%20o%20meu%20pet!" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center gap-3 text-base animate-pulse-green">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Ligar / WhatsApp Emergência</span>
+                        </a>
+
+                        <a href="#servicos" 
+                           class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-bold px-6 py-4 rounded-2xl shadow-md border border-slate-200 transition-all duration-300 text-center text-base">
+                            Conhecer Nossos Serviços
+                        </a>
+                    </div>
+
+                    <!-- Key highlights chips -->
+                    <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-slate-600 text-xs sm:text-sm font-medium">
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-green text-base"></i> Preço Acessível
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-green text-base"></i> Banho & Tosa Humanizado
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-circle-check text-brand-green text-base"></i> Equipe Atenciosa
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Column / Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Image Container -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200 aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Veterinário atendendo cachorro com carinho na Pet's Home Bauru" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            
+                            <!-- Floating Card Badge inside Image -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 text-slate-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold shrink-0">
+                                        <i class="fa-solid fa-heart-pulse text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="text-sm font-bold">Estrutura Completa de Pronto-Socorro</h2>
+                                        <p class="text-xs text-slate-500">Aberto agora • R. José Aielo, 420 - Centro</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Secondary floating highlight element -->
+                        <div class="absolute -top-6 -right-6 bg-brand-orange text-white p-4 rounded-2xl shadow-xl hidden sm:flex items-center gap-3 transform rotate-3">
+                            <i class="fa-solid fa-shield-cat text-3xl"></i>
+                            <div>
+                                <span class="text-xs uppercase font-bold block opacity-90">Cuidado Especial</span>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EMERGENCY HIGHLIGHT / PLANTÃO 24H BAR -->
+    <section id="plantao" class="bg-gradient-to-r from-brand-darkblue to-brand-blue text-white py-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                
+                <div class="lg:col-span-2 space-y-3">
+                    <span class="bg-red-500/20 text-red-300 border border-red-400/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Atendimento Imediato
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold">Seu Pet Precisa de Socorro Agora?</h2>
+                    <p class="text-sky-100 text-sm sm:text-base leading-relaxed">
+                        Nossa equipe veterinária está de plantão presencial 24 horas por dia, 7 dias por semana, pronta para acidentes, sintomas graves, intoxicações e emergências cirúrgicas.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+                    <a href="https://wa.me/5514981246105?text=URGENTE:%20Preciso%20de%20atendimento%20de%20emergência%20agora!" 
+                       target="_blank"
+                       rel="noopener noreferrer" 
+                       class="bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-center px-6 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>WhatsApp de Emergência 24h</span>
+                    </a>
+                    <a href="tel:5514981246105" 
+                       class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-center px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Ligar para (14) 98124-6105</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-100">
+                    Nossos Serviços
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Cuidados Completos para Cães e Gatos
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Da prevenção à alta complexidade, oferecemos tudo o que seu melhor amigo precisa em um único local no Centro de Bauru.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-brand-blue/30 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-truck-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Pronto-Socorro 24h</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Atendimento de urgência e emergência sem interrupções. Equipe preparada para trauma, intoxicações e crises agudas a qualquer hora da noite ou do dia.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/60 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Plantão médico presencial</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Suporte vital imediato</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-brand-blue/30 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-sky-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Consultas Clínicas</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Consultas de rotina, vacinação, vermifugação e acompanhamento preventivo com veterinários dedicados, atenciosos e focados no bem-estar do pet.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/60 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Check-up preventivo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Orientação nutricional</li>
+                    </ul>
+                </div>
